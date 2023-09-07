@@ -16,7 +16,7 @@ function ProductDetails(): JSX.Element {
         (async () => {
             try {
                 const id = +params.id; // Route params
-                const product = await productsService.getOneProducts(id);
+                const product = await productsService.getOneProduct(id);
                 setProduct(product);
             }
             catch (err: any) {
@@ -50,9 +50,7 @@ function ProductDetails(): JSX.Element {
             <img src={product?.imageUrl} />
             <br />
             <NavLink className="NavLink" to="/products">Back</NavLink>
-            <br />
             <NavLink className="NavLink" to="#" onClick={deleteMe}>Delete</NavLink>
-            <br />
             <NavLink className="NavLink" to={"/products/edit/" + product?.id}>Edit</NavLink>
 
         </div>

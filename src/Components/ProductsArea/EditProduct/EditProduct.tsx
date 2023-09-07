@@ -14,7 +14,7 @@ function EditProduct(): JSX.Element {
 
     useEffect(() => {
         const id = +params.id;
-        productsService.getOneProducts(id)
+        productsService.getOneProduct(id)
             .then(product => {
                 setValue("id", product.id);
                 setValue("name", product.name);

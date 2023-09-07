@@ -1,9 +1,14 @@
 .ProductDetails > img {
-	width: 400px;
+	width: 300px;
+    height: 250px;
+    border: 2px solid;
+    margin: 10px;
 }
 
 .NavLink {
-    background-color: blue;
+    background-color: darkcyan;
     color: white;
-    margin-top: 20px;
+    margin: 20px;
+    text-decoration: none;
+    border-radius: 3px;
 }

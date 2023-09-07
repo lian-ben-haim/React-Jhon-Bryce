@@ -4,6 +4,7 @@ import productsService from "../../../Services/ProductsService";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 import useTitle from "../../../Utils/UseTitle";
+import Spinner from "../../SharedArea/Spinner/Spinner";
 
 function ProductList(): JSX.Element {
 
@@ -19,6 +20,8 @@ function ProductList(): JSX.Element {
 
     return (
         <div className="ProductList">
+
+            {allProducts.length === 0 && <Spinner/>}
 
             {/* Sending data to props: */}
             {allProducts.map(p => <ProductCard key={p.id} product={p} />)}
