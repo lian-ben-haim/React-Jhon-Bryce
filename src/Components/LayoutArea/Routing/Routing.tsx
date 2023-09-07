@@ -9,6 +9,8 @@ import Spinner from "../../SharedArea/Spinner/Spinner";
 import AddProduct from "../../ProductsArea/AddProduct/AddProduct";
 import EmployeesList from "../../EmployeesArea/EmployeesList/EmployeesList";
 import EditProduct from "../../ProductsArea/EditProduct/EditProduct";
+import Register from "../../AuthArea/Register/Register";
+import Login from "../../AuthArea/Login/Login";
 
 function Routing(): JSX.Element {
 
@@ -28,6 +30,10 @@ function Routing(): JSX.Element {
     return (
         <div className="Routing">
             <Routes>
+
+                <Route path="/register" element={<Register />} />
+
+                <Route path="/login" element={<Login />} />
 
                 <Route path="/home" element={<Home />} />
 
