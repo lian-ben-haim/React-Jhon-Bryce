@@ -12,6 +12,7 @@ import EditProduct from "../../ProductsArea/EditProduct/EditProduct";
 import Register from "../../AuthArea/Register/Register";
 import Login from "../../AuthArea/Login/Login";
 import Top3 from "../../ProductsArea/Top3/Top3";
+import OutOfStock from "../../ProductsArea/OutOfStock/OutOfStock";
 
 function Routing(): JSX.Element {
 
@@ -41,6 +42,8 @@ function Routing(): JSX.Element {
                 <Route path="/products" element={<ProductList />} />
 
                 <Route path="/products/top3" element={<Top3 />} />
+
+                <Route path="/products/out-of-stock" element={<OutOfStock />} />
 
                 <Route path="/products/details/:id" element={<ProductDetails />} />
 
