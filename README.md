@@ -44,3 +44,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Needed / Helpful commands:
+
+* npm i -g react-cli-snippets => to download it globaly on your computer.
+now you can use : create fc <Name>Area/<Name>___ to create a directory with tsx & css files (for example - create fc HomeArea/Home -> Home.tsx, Home.css
+
+* npm i react-hook-form
+
+# Redux:
+* npm i @reduxjs/toolkit
+* npm i react-redux @types/react-redux
