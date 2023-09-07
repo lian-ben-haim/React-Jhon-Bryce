@@ -5,18 +5,30 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 import useTitle from "../../../Utils/UseTitle";
 import Spinner from "../../SharedArea/Spinner/Spinner";
+import { useSelector } from "react-redux";
+import { AppState } from "../../../Redux/AppState";
 
 function ProductList(): JSX.Element {
 
     useTitle("Products");
     
-    const [allProducts, setAllProducts] = useState<ProductModel[]>([]);
+    // for GLOBAL state use
+    // --------------------
+    const allProducts = useSelector((appState : AppState) => appState.products);
 
     useEffect(() => {
-        productsService.getAllProducts()
-            .then(products => setAllProducts(products))
-            .catch(err => alert(err.message));
-    }, []);
+        productsService.getAllProducts().catch(err => alert(err.message));
+    })
+
+    // for LOCAL state use :
+    // --------------------
+    // const [allProducts, setAllProducts] = useState<ProductModel[]>([]); 
+    //
+    // useEffect(() => {
+    //     productsService.getAllProducts()
+    //         .then(products => setAllProducts(products))
+    //         .catch(err => alert(err.message));
+    // }, []);
 
     return (
         <div className="ProductList">

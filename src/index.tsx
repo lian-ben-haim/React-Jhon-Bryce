@@ -3,13 +3,17 @@ import Layout from './Components/LayoutArea/Layout/Layout';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { appStore } from './Redux/AppState';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <BrowserRouter>
-        <Layout />
+        <Provider store={appStore}>
+            <Layout />
+        </Provider>
     </BrowserRouter>
 );
 
