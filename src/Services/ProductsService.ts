@@ -54,6 +54,13 @@ class ProductsService {
 
         appStore.dispatch(productActions.updateOne(updatedProduct));
     }
+
+    public async getTop3Products(): Promise<ProductModel[]> {
+        const response = await axios.get<ProductModel[]>(appConfig.productsTop3Url);
+        const products = response.data;
+        
+        return products;
+    }
 }
 
 const productsService = new ProductsService();

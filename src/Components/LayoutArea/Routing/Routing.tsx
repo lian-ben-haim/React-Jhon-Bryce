@@ -11,6 +11,7 @@ import EmployeesList from "../../EmployeesArea/EmployeesList/EmployeesList";
 import EditProduct from "../../ProductsArea/EditProduct/EditProduct";
 import Register from "../../AuthArea/Register/Register";
 import Login from "../../AuthArea/Login/Login";
+import Top3 from "../../ProductsArea/Top3/Top3";
 
 function Routing(): JSX.Element {
 
@@ -38,6 +39,8 @@ function Routing(): JSX.Element {
                 <Route path="/home" element={<Home />} />
 
                 <Route path="/products" element={<ProductList />} />
+
+                <Route path="/products/top3" element={<Top3 />} />
 
                 <Route path="/products/details/:id" element={<ProductDetails />} />
 

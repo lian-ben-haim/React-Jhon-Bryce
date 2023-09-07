@@ -14,10 +14,12 @@ function Menu(): JSX.Element {
 
             <NavLink to="/products/add">Add Product</NavLink>
 
+            <NavLink to="/products/top3">Top 3 Products</NavLink>
+
             <NavLink to={"/employees"}>Our Employees</NavLink>
             
             <TotalProducts />
-            
+
         </div>
     );
 }
