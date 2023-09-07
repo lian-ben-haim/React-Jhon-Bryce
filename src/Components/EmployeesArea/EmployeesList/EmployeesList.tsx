@@ -1,17 +1,27 @@
+import { useSelector } from "react-redux";
 import EmployeeModel from "../../../Models/EmployeeModel";
 import employeesService from "../../../Services/EmployeesService";
 import css from "./EmployeesList.module.css";
 import { useState, useEffect } from "react";
+import { AppState } from "../../../Redux/AppState";
 
 function EmployeesList(): JSX.Element {
 
-    const [employees, setEmployees] = useState<EmployeeModel[]>([]);
+    //const [employees, setEmployees] = useState<EmployeeModel[]>([]);
+
+    // useEffect(() => {
+    //     employeesService.getAllEmployees()
+    //     .then(employees => setEmployees(employees))
+    //     .catch(err => alert(err.message))
+    // }, [])
+
+    const employees = useSelector((appState : AppState) => appState.employees);
 
     useEffect(() => {
-        employeesService.getAllEmployees()
-        .then(employees => setEmployees(employees))
-        .catch(err => alert(err.message))
-    }, [])
+        employeesService.getAllEmployees().catch(err => alert(err.message));
+    })
+
+
 
     function changeColor() : void {
         
